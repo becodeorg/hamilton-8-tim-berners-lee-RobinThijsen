@@ -104,12 +104,6 @@ li a:hover, li a:hover i {
 }
 li:nth-child(1) a:hover i {
 	animation: wiggle 1.2s ease-in-out infinite;
-	/*
-	animation-name: wiggle;
-	animation-duration: 1.2s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	*/
 }
 li:nth-child(2) a:hover i {
 	animation: rainbow 1.2s ease-in-out infinite;
@@ -220,5 +214,8 @@ article h3 {
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+	}
+	section>section img {
+		margin-bottom: 2em;
 	}
 }
