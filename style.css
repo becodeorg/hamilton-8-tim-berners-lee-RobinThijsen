@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
 :root {
-	--red: #cb3939;
-	--grey: #dddddd;
+	--red: #dd5555;
+	--grey: #ebebeb;
 	--white: #ffffff;
-	--txt: #7c7c7c;
+	--txt: #817a83;
 	--shadow: #cacaca;
 }
 * {
@@ -102,10 +102,19 @@ li a i {
 li a:hover, li a:hover i {
 	color: var(--red);
 }
-li a:hover i {
-	animation: wiggle 0.7s ease-in-out infinite;
+li:nth-child(1) a:hover i, li:nth-child(3) a:hover i {
+	animation: wiggle 1.2s ease-in-out infinite;
 	/*
 	animation-name: wiggle;
+	animation-duration: 0.7s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	*/
+}
+li:nth-child(2) a:hover i {
+	animation: rainbow 1.2s ease-in-out infinite;
+	/*
+	animation-name: rainbow;
 	animation-duration: 0.7s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
@@ -131,6 +140,27 @@ section article {
 }
 section article h3 {
 	font-weight: 600;
+}
+
+@keyframes rainbow {
+	0% {
+		color: var(--red);
+	}
+	20% {
+		color: #c48a32;
+	}
+	40% {
+		color: #f7db32;
+	}
+	60% {
+		color: #63ff55;
+	}
+	80% {
+		color: #4285f6;
+	}
+	100% {
+		color: #c83fff;
+	}
 }
 
 @keyframes wiggle {
