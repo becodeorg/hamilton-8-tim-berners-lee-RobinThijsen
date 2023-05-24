@@ -104,6 +104,12 @@ li a:hover, li a:hover i {
 }
 li a:hover i {
 	animation: wiggle 0.7s ease-in-out infinite;
+	/*
+	animation-name: wiggle;
+	animation-duration: 0.7s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	*/
 }
 main>section:last-child {
 	gap: 3em;
