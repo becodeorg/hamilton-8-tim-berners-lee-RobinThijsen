@@ -31,7 +31,7 @@ main>section {
 	width: 40%;
 	background: var(--white);
 	border-radius: 5px;
-	padding: 1em;
+	padding: 1.5em;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -106,7 +106,7 @@ li:nth-child(1) a:hover i, li:nth-child(3) a:hover i {
 	animation: wiggle 1.2s ease-in-out infinite;
 	/*
 	animation-name: wiggle;
-	animation-duration: 0.7s;
+	animation-duration: 1.2s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
 	*/
@@ -115,9 +115,19 @@ li:nth-child(2) a:hover i {
 	animation: rainbow 1.2s ease-in-out infinite;
 	/*
 	animation-name: rainbow;
-	animation-duration: 0.7s;
+	animation-duration: 1.2s;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count: infinite;
+	*/
+}
+li:nth-child(3) a:hover i {
+	animation: glow 1.2s ease-in-out infinite alternate;
+	/*
+	animation-name: glow;
+	animation-duration: 1.2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
 	*/
 }
 main>section:last-child {
@@ -155,7 +165,7 @@ section article h3 {
 	60% {
 		color: #63ff55;
 	}
-	80% {
+	80% {
 		color: #4285f6;
 	}
 	100% {
@@ -169,6 +179,18 @@ section article h3 {
 	}
 	100% {
 		transform: rotate(360deg);
+	}
+}
+
+@keyframes glow {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(0.5);
+	}
+	100% {
+		transform: scale(1.5);
 	}
 }
 
