@@ -102,7 +102,7 @@ li a i {
 li a:hover, li a:hover i {
 	color: var(--red);
 }
-li:nth-child(1) a:hover i, li:nth-child(3) a:hover i {
+li:nth-child(1) a:hover i {
 	animation: wiggle 1.2s ease-in-out infinite;
 	/*
 	animation-name: wiggle;
@@ -113,12 +113,6 @@ li:nth-child(1) a:hover i, li:nth-child(3) a:hover i {
 }
 li:nth-child(2) a:hover i {
 	animation: rainbow 1.2s ease-in-out infinite;
-	/*
-	animation-name: rainbow;
-	animation-duration: 1.2s;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count: infinite;
-	*/
 }
 li:nth-child(3) a:hover i {
 	animation: glow 1.2s ease-in-out infinite alternate;
@@ -148,7 +142,27 @@ section article {
 	gap: 1.5em;
 	margin-left: 1em;
 }
-section article h3 {
+article a {
+	position: relative;
+	transition: all .3s ease-in-out;
+}
+article a::after {
+	content: "";
+	width: 0;
+	height: 3px;
+	position: absolute;
+	bottom: -0.1em;
+	left: 0;
+	background: var(--red);
+	transition: all .3s ease-in-out;
+}
+article a:hover {
+	color: var(--red);
+}
+article a:hover::after {
+	width: 100%;
+}
+article h3 {
 	font-weight: 600;
 }
 
